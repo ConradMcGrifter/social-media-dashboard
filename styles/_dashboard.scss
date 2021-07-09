@@ -6,11 +6,12 @@
     @include flexCenter();
 
     .account-card {
-        outline: solid lightblue 1px;
+        border-radius: 5px;
+        position: relative;
         width: 100%;
-        padding: 1em;
+        padding: 1.5em;
         text-align: center;
-
+        background: var(--clr-Theme-card-bg);
         + .account-card {
             margin-left: 2em;
         }
@@ -19,15 +20,77 @@
             @include flexCenter();
 
             .account-card__name {
-                font-size: 1.4rem;
+                font-size: 1.2rem;
+                margin-left: 1em;
             }
         }
 
         .followers {
             &__number {
-                font-size: 3rem;
+                margin-top: 0.5em;
+                font-size: 5rem;
+                font-weight: 700;
                 color: var(--clr-Theme-hightlight);
             }
+
+            &__label {
+                letter-spacing: 0.2em;
+            }
+        }
+
+        .status {
+            margin-top: 1.5em;
+            margin-bottom: 1em;
+            @include flexCenter();
+
+            &__amount {
+                margin-left: 0.25em;
+                font-weight: 700;
+                color: color(primary-1);
+            }
+
+            .negative {
+                color: color(primary-2);
+            }
+        }
+
+        &::before {
+            content: "";
+            width: 100%;
+            height: 5px;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            border-radius: 999px 999px 0 0;
+        }
+    }
+
+    .facebook-dashboard {
+        &::before {
+            background: rgb(50, 86, 243);
+        }
+    }
+
+    .twitter-dashboard {
+        &::before {
+            background: rgb(25, 112, 211);
+        }
+    }
+
+    .instagram-dashboard {
+        &::before {
+            background: linear-gradient(
+                to right,
+                rgb(252, 252, 136),
+                rgb(255, 93, 255)
+            );
+        }
+    }
+
+    .youtube-dashboard {
+        &::before {
+            background: rgb(160, 0, 0);
         }
     }
 }

@@ -33,6 +33,11 @@
   color: var(--clr-Theme-hightlight);
 }
 
+.header .header__title .title__small {
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
 .accounts {
   outline: solid green 1px;
   width: 100%;
@@ -54,10 +59,12 @@
 }
 
 .accounts .account-card {
-  outline: solid lightblue 1px;
+  border-radius: 5px;
+  position: relative;
   width: 100%;
-  padding: 1em;
+  padding: 1.5em;
   text-align: center;
+  background: var(--clr-Theme-card-bg);
 }
 
 .accounts .account-card + .account-card {
@@ -81,12 +88,74 @@
 }
 
 .accounts .account-card__name--wrap .account-card__name {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  margin-left: 1em;
 }
 
 .accounts .account-card .followers__number {
-  font-size: 3rem;
+  margin-top: 0.5em;
+  font-size: 5rem;
+  font-weight: 700;
   color: var(--clr-Theme-hightlight);
+}
+
+.accounts .account-card .followers__label {
+  letter-spacing: 0.2em;
+}
+
+.accounts .account-card .status {
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.accounts .account-card .status__amount {
+  margin-left: 0.25em;
+  font-weight: 700;
+  color: #1db489;
+}
+
+.accounts .account-card .status .negative {
+  color: #dc414c;
+}
+
+.accounts .account-card::before {
+  content: "";
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 999px 999px 0 0;
+}
+
+.accounts .facebook-dashboard::before {
+  background: #3256f3;
+}
+
+.accounts .twitter-dashboard::before {
+  background: #1970d3;
+}
+
+.accounts .instagram-dashboard::before {
+  background: -webkit-gradient(linear, left top, right top, from(#fcfc88), to(#ff5dff));
+  background: linear-gradient(to right, #fcfc88, #ff5dff);
+}
+
+.accounts .youtube-dashboard::before {
+  background: #a00000;
 }
 
 html {
