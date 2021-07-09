@@ -1,0 +1,33 @@
+.accounts {
+    outline: solid green 1px;
+    width: 100%;
+    max-width: 1200px;
+    padding: $padding;
+    @include flexCenter();
+
+    .account-card {
+        outline: solid lightblue 1px;
+        width: 100%;
+        padding: 1em;
+        text-align: center;
+
+        + .account-card {
+            margin-left: 2em;
+        }
+
+        &__name--wrap {
+            @include flexCenter();
+
+            .account-card__name {
+                font-size: 1.4rem;
+            }
+        }
+
+        .followers {
+            &__number {
+                font-size: 3rem;
+                color: var(--clr-Theme-hightlight);
+            }
+        }
+    }
+}

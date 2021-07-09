@@ -1,4 +1,94 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+:root {
+  --clr-Theme-bg: hsl(230, 17%, 14%);
+  --clr-Theme-top-bg-pattern: hsl(232, 19%, 15%);
+  --clr-Theme-card-bg: hsl(228, 28%, 20%);
+  --clr-Theme-text: hsl(228, 34%, 66%);
+  --clr-Theme-hightlight: hsl(0, 0%, 100%);
+}
+
+.lightTheme {
+  --clr-Theme-bg: hsl(0, 0%, 100%);
+  --clr-Theme-top-bg-pattern: hsl(225, 100%, 98%);
+  --clr-Theme-card-bg: hsl(227, 47%, 96%);
+  --clr-Theme-text: hsl(228, 12%, 44%);
+  --clr-Theme-hightlight: hsl(230, 17%, 14%);
+}
+
+.header {
+  outline: solid red 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2em;
+}
+
+.header .header__title .title__h1 {
+  color: var(--clr-Theme-hightlight);
+}
+
+.accounts {
+  outline: solid green 1px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.accounts .account-card {
+  outline: solid lightblue 1px;
+  width: 100%;
+  padding: 1em;
+  text-align: center;
+}
+
+.accounts .account-card + .account-card {
+  margin-left: 2em;
+}
+
+.accounts .account-card__name--wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.accounts .account-card__name--wrap .account-card__name {
+  font-size: 1.4rem;
+}
+
+.accounts .account-card .followers__number {
+  font-size: 3rem;
+  color: var(--clr-Theme-hightlight);
+}
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -16,13 +106,22 @@ html {
 }
 
 body {
-  min-height: 100%;
-  background: #1e202a;
+  height: 100%;
+  background: var(--clr-Theme-bg);
   font-family: "Inter", sans-serif;
   font-size: 1.4rem;
+  -webkit-transition: background 0.25s, color 0.25s;
+  transition: background 0.25s, color 0.25s;
+  color: var(--clr-Theme-text);
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
 }
 
-body.lightTheme {
-  background: white;
+.container {
+  outline: solid yellow 2px;
+  height: 100%;
+  max-width: 1200px;
+  width: 100%;
 }
 /*# sourceMappingURL=styles.css.map */

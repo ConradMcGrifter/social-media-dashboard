@@ -1,26 +1,44 @@
+:root {
+    --clr-Theme-bg: hsl(230, 17%, 14%);
+    --clr-Theme-top-bg-pattern: hsl(232, 19%, 15%);
+    --clr-Theme-card-bg: hsl(228, 28%, 20%);
+    --clr-Theme-text: hsl(228, 34%, 66%);
+    --clr-Theme-hightlight: hsl(0, 0%, 100%);
+}
+
+.lightTheme {
+    --clr-Theme-bg: hsl(0, 0%, 100%);
+    --clr-Theme-top-bg-pattern: hsl(225, 100%, 98%);
+    --clr-Theme-card-bg: hsl(227, 47%, 96%);
+    --clr-Theme-text: hsl(228, 12%, 44%);
+    --clr-Theme-hightlight: hsl(230, 17%, 14%);
+}
+
 $colors: (
     primary-1: hsl(163, 72%, 41%),
     primary-2: hsl(356, 69%, 56%),
 );
 
-$darkTheme: (
-    darkTheme-bg: hsl(230, 17%, 14%),
-    darkTheme-top-bg-pattern: hsl(232, 19%, 15%),
-    darkTheme-card-bg: hsl(228, 28%, 20%),
-    darkTheme-text: hsl(228, 34%, 66%),
-    darkTheme-White: hsl(0, 0%, 100%),
-);
+$padding: 2em;
 
-$lightTheme: (
-    lightTheme-bg: hsl(0, 0%, 100%),
-    lightTheme-top-bg-pattern: hsl(225, 100%, 98%),
-    lightTheme-card-bg: hsl(227, 47%, 96%),
-    lightTheme-text: hsl(228, 12%, 44%),
-    lightTheme-dark-blue: hsl(230, 17%, 14%),
-);
+// $darkTheme: (
+//     darkTheme-bg: hsl(230, 17%, 14%),
+//     darkTheme-top-bg-pattern: hsl(232, 19%, 15%),
+//     darkTheme-card-bg: hsl(228, 28%, 20%),
+//     darkTheme-text: hsl(228, 34%, 66%),
+//     darkTheme-White: hsl(0, 0%, 100%),
+// );
 
-@function color($color-group, $color-name) {
-    @return map-get($color-group, $color-name);
+// $lightTheme: (
+//     lightTheme-bg: hsl(0, 0%, 100%),
+//     lightTheme-top-bg-pattern: hsl(225, 100%, 98%),
+//     lightTheme-card-bg: hsl(227, 47%, 96%),
+//     lightTheme-text: hsl(228, 12%, 44%),
+//     lightTheme-dark-blue: hsl(230, 17%, 14%),
+// );
+
+@function color($color-name) {
+    @return map-get($colors, $color-name);
 }
 
 @mixin flexCenter($direction: row) {

@@ -1,4 +1,4 @@
-@import "utils";
+@import "utils", "header", "dashboard";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
 html {
@@ -13,15 +13,23 @@ html {
     box-sizing: inherit;
     margin: 0;
     padding: 0;
+    // outline: solid red 1px;
 }
 
 body {
-    min-height: 100%;
-    background: color($darkTheme, darkTheme-bg);
+    height: 100%;
+    background: var(--clr-Theme-bg);
     font-family: "Inter", sans-serif;
     font-size: 1.4rem;
+    transition: background 0.25s, color 0.25s;
+    color: var(--clr-Theme-text);
+    display: grid;
+    place-items: center;
+}
 
-    &.lightTheme {
-        background: color($lightTheme, lightTheme-bg);
-    }
+.container {
+    outline: solid yellow 2px;
+    height: 100%;
+    max-width: 1200px;
+    width: 100%;
 }
