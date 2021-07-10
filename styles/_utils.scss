@@ -21,22 +21,6 @@ $colors: (
 
 $padding: 2em;
 
-// $darkTheme: (
-//     darkTheme-bg: hsl(230, 17%, 14%),
-//     darkTheme-top-bg-pattern: hsl(232, 19%, 15%),
-//     darkTheme-card-bg: hsl(228, 28%, 20%),
-//     darkTheme-text: hsl(228, 34%, 66%),
-//     darkTheme-White: hsl(0, 0%, 100%),
-// );
-
-// $lightTheme: (
-//     lightTheme-bg: hsl(0, 0%, 100%),
-//     lightTheme-top-bg-pattern: hsl(225, 100%, 98%),
-//     lightTheme-card-bg: hsl(227, 47%, 96%),
-//     lightTheme-text: hsl(228, 12%, 44%),
-//     lightTheme-dark-blue: hsl(230, 17%, 14%),
-// );
-
 @function color($color-name) {
     @return map-get($colors, $color-name);
 }
@@ -48,8 +32,8 @@ $padding: 2em;
     flex-direction: $direction;
 }
 
-@mixin desktopSize {
-    @media only screen and (min-width: 850px) {
+@mixin mobileSize {
+    @media only screen and (max-width: 850px) {
         @content;
     }
 }

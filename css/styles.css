@@ -1,4 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  background: var(--clr-Theme-bg);
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  -webkit-transition: background 0.25s, color 0.25s;
+  transition: background 0.25s, color 0.25s;
+  color: var(--clr-Theme-text);
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  height: 100%;
+  max-width: 1200px;
+  width: 100%;
+}
+
 :root {
   --clr-Theme-bg: hsl(230, 17%, 14%);
   --clr-Theme-top-bg-pattern: hsl(232, 19%, 15%);
@@ -16,7 +51,6 @@
 }
 
 .header {
-  outline: solid red 1px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,7 +73,6 @@
 }
 
 .accounts {
-  outline: solid green 1px;
   width: 100%;
   max-width: 1200px;
   padding: 2em;
@@ -72,6 +105,7 @@
 }
 
 .accounts .account-card__name--wrap {
+  margin-top: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -142,55 +176,19 @@
 }
 
 .accounts .facebook-dashboard::before {
-  background: #3256f3;
+  background: #178ff5;
 }
 
 .accounts .twitter-dashboard::before {
-  background: #1970d3;
+  background: #1da1f2;
 }
 
 .accounts .instagram-dashboard::before {
-  background: -webkit-gradient(linear, left top, right top, from(#fcfc88), to(#ff5dff));
-  background: linear-gradient(to right, #fcfc88, #ff5dff);
+  background: -webkit-gradient(linear, left top, right top, from(#fdc366), color-stop(#ee877e), to(#df4896));
+  background: linear-gradient(to right, #fdc366, #ee877e, #df4896);
 }
 
 .accounts .youtube-dashboard::before {
-  background: #a00000;
-}
-
-html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  height: 100%;
-  font-size: 62.5%;
-}
-
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  height: 100%;
-  background: var(--clr-Theme-bg);
-  font-family: "Inter", sans-serif;
-  font-size: 1.4rem;
-  -webkit-transition: background 0.25s, color 0.25s;
-  transition: background 0.25s, color 0.25s;
-  color: var(--clr-Theme-text);
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
-}
-
-.container {
-  outline: solid yellow 2px;
-  height: 100%;
-  max-width: 1200px;
-  width: 100%;
+  background: #c4032b;
 }
 /*# sourceMappingURL=styles.css.map */

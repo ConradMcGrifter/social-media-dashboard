@@ -1,5 +1,5 @@
 .accounts {
-    outline: solid green 1px;
+    // outline: solid green 1px;
     width: 100%;
     max-width: 1200px;
     padding: $padding;
@@ -17,6 +17,7 @@
         }
 
         &__name--wrap {
+            margin-top: 1em;
             @include flexCenter();
 
             .account-card__name {
@@ -68,29 +69,25 @@
 
     .facebook-dashboard {
         &::before {
-            background: rgb(50, 86, 243);
+            background: #178ff5;
         }
     }
 
     .twitter-dashboard {
         &::before {
-            background: rgb(25, 112, 211);
+            background: #1da1f2;
         }
     }
 
     .instagram-dashboard {
         &::before {
-            background: linear-gradient(
-                to right,
-                rgb(252, 252, 136),
-                rgb(255, 93, 255)
-            );
+            background: linear-gradient(to right, #fdc366, #ee877e, #df4896);
         }
     }
 
     .youtube-dashboard {
         &::before {
-            background: rgb(160, 0, 0);
+            background: #c4032b;
         }
     }
 }
