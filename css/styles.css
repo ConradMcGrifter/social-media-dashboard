@@ -26,6 +26,17 @@ body {
   display: -ms-grid;
   display: grid;
   place-items: center;
+  position: relative;
+}
+
+body .background-piece {
+  width: 100%;
+  height: 250px;
+  border-radius: 0 0 15px 15px;
+  position: absolute;
+  top: 0;
+  background: var(--clr-Theme-top-bg-pattern);
+  z-index: -1;
 }
 
 .container {
@@ -65,6 +76,7 @@ body {
 
 .header .header__title .title__h1 {
   color: var(--clr-Theme-hightlight);
+  margin-bottom: 0.25em;
 }
 
 @media only screen and (max-width: 850px) {
@@ -98,6 +110,18 @@ body {
   }
 }
 
+.header .mode-toggle {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 @media only screen and (max-width: 850px) {
   .header .mode-toggle {
     display: -webkit-box;
@@ -108,6 +132,44 @@ body {
             justify-content: space-between;
     width: 100%;
   }
+}
+
+.header .mode-toggle .mode-toggle__label {
+  font-weight: 700;
+}
+
+.header .mode-toggle #mode-btn {
+  cursor: pointer;
+  background: -webkit-gradient(linear, left top, right top, from(#40ade0), to(#1db489));
+  background: linear-gradient(to right, #40ade0, #1db489);
+  border-radius: 999px;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 0 0 0 0.5em;
+  padding: 0.15em;
+  width: 45px;
+}
+
+.header .mode-toggle #mode-btn.active {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background: #c9c9c9;
+}
+
+.header .mode-toggle .circle {
+  height: 17px;
+  width: 17px;
+  border-radius: 999px;
+  background: var(--clr-Theme-bg);
 }
 
 .accounts {
@@ -173,7 +235,7 @@ body {
 
 .accounts .account-card__name--wrap .account-card__name {
   font-size: 1.2rem;
-  margin-left: 1em;
+  margin-left: 0.5em;
 }
 
 .accounts .account-card .followers__number {

@@ -8,6 +8,7 @@
     .header__title {
         .title__h1 {
             color: var(--clr-Theme-hightlight);
+            margin-bottom: 0.25em;
 
             @include mobileSize {
                 font-size: 2.2rem;
@@ -35,10 +36,47 @@
     }
 
     .mode-toggle {
+        width: max-content;
+        display: flex;
+        align-items: center;
         @include mobileSize {
             display: flex;
             justify-content: space-between;
             width: 100%;
+        }
+
+        .mode-toggle__label {
+            font-weight: 700;
+        }
+
+        #mode-btn {
+            cursor: pointer;
+            background: linear-gradient(
+                to right,
+                rgb(64, 173, 224),
+                color(primary-1)
+            );
+            border-radius: 999px;
+            border: none;
+
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin: 0 0 0 0.5em;
+            padding: 0.15em;
+            width: 45px;
+        }
+
+        #mode-btn.active {
+            justify-content: flex-end;
+            background: rgb(201, 201, 201);
+        }
+
+        .circle {
+            height: 17px;
+            width: 17px;
+            border-radius: 999px;
+            background: var(--clr-Theme-bg);
         }
     }
 }
