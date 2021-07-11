@@ -20,6 +20,7 @@ $colors: (
 );
 
 $padding: 2em;
+$border-radius: 5px;
 
 @function color($color-name) {
     @return map-get($colors, $color-name);

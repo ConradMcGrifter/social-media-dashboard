@@ -1,19 +1,28 @@
 .accounts {
     // outline: solid green 1px;
     width: 100%;
-    max-width: 1200px;
+    // max-width: 1200px;
     padding: $padding;
     @include flexCenter();
 
+    @include mobileSize {
+        flex-wrap: wrap;
+    }
+
     .account-card {
-        border-radius: 5px;
+        border-radius: $border-radius;
         position: relative;
         width: 100%;
         padding: 1.5em;
         text-align: center;
         background: var(--clr-Theme-card-bg);
+        // this setts margin for the cards after the first card
         + .account-card {
             margin-left: 2em;
+
+            @include mobileSize {
+                margin: 2em 0 0 0;
+            }
         }
 
         &__name--wrap {
