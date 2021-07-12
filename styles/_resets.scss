@@ -32,6 +32,7 @@ body {
         top: 0;
         background: var(--clr-Theme-top-bg-pattern);
         z-index: -1;
+        transition: background 0.25s;
     }
 }
 

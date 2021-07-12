@@ -47,14 +47,15 @@
 
         .mode-toggle__label {
             font-weight: 700;
+            cursor: pointer;
         }
 
         #mode-btn {
             cursor: pointer;
             background: linear-gradient(
                 to right,
-                rgb(64, 173, 224),
-                color(primary-1)
+                hsl(210, 78%, 56%),
+                hsl(146, 68%, 55%)
             );
             border-radius: 999px;
             border: none;

@@ -37,6 +37,8 @@ body .background-piece {
   top: 0;
   background: var(--clr-Theme-top-bg-pattern);
   z-index: -1;
+  -webkit-transition: background 0.25s;
+  transition: background 0.25s;
 }
 
 .container {
@@ -71,7 +73,7 @@ body .background-piece {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 2em;
+  padding: 1.5em;
 }
 
 .header .header__title .title__h1 {
@@ -136,12 +138,13 @@ body .background-piece {
 
 .header .mode-toggle .mode-toggle__label {
   font-weight: 700;
+  cursor: pointer;
 }
 
 .header .mode-toggle #mode-btn {
   cursor: pointer;
-  background: -webkit-gradient(linear, left top, right top, from(#40ade0), to(#1db489));
-  background: linear-gradient(to right, #40ade0, #1db489);
+  background: -webkit-gradient(linear, left top, right top, from(#378fe6), to(#3eda82));
+  background: linear-gradient(to right, #378fe6, #3eda82);
   border-radius: 999px;
   border: none;
   display: -webkit-box;
@@ -174,7 +177,7 @@ body .background-piece {
 
 .accounts {
   width: 100%;
-  padding: 2em;
+  padding: 1.5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -250,8 +253,8 @@ body .background-piece {
 }
 
 .accounts .account-card .status {
-  margin-top: 1.5em;
-  margin-bottom: 1em;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -305,7 +308,7 @@ body .background-piece {
 }
 
 .overview {
-  padding: 2em;
+  padding: 1.5em;
 }
 
 .overview .overview__h2 {
