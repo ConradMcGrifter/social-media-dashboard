@@ -171,8 +171,8 @@ body .background-piece {
 }
 
 .header .mode-toggle .circle {
-  height: 17px;
-  width: 17px;
+  height: 18px;
+  width: 18px;
   border-radius: 999px;
   background: var(--clr-Theme-bg);
 }
