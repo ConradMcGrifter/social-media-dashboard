@@ -202,6 +202,36 @@ body .background-piece {
   }
 }
 
+.accounts .split {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+  .accounts .split {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.accounts .split + .split {
+  margin-left: 2em;
+}
+
+@media only screen and (max-width: 850px) {
+  .accounts .split + .split {
+    margin: 1em 0 0 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .accounts .split + .split {
+    margin: 1em 0 0 0;
+  }
+}
+
 .accounts .account-card {
   border-radius: 5px;
   position: relative;
@@ -214,6 +244,12 @@ body .background-piece {
   transition: background 0.25s;
 }
 
+@media only screen and (max-width: 850px) {
+  .accounts .account-card {
+    min-width: 250px;
+  }
+}
+
 .accounts .account-card:hover {
   background: var(--clr-Theme-card-bg-hover);
 }
@@ -224,7 +260,14 @@ body .background-piece {
 
 @media only screen and (max-width: 850px) {
   .accounts .account-card + .account-card {
-    margin: 2em 0 0 0;
+    margin-left: 1em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .accounts .account-card + .account-card {
+    margin-left: 0;
+    margin-top: 1em;
   }
 }
 

@@ -40,3 +40,9 @@ $border-radius: 5px;
         @content;
     }
 }
+
+@mixin mobileSizeSmall {
+    @media only screen and (max-width: 600px) {
+        @content;
+    }
+}
