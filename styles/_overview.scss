@@ -22,6 +22,13 @@
     background: var(--clr-Theme-card-bg);
     padding: 1.5em;
     border-radius: $border-radius;
+    cursor: pointer;
+    transition: background 0.25s;
+
+    &:hover {
+        background: var(--clr-Theme-card-bg-hover);
+    }
+
     .top {
         display: flex;
         justify-content: space-between;

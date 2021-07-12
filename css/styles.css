@@ -51,6 +51,7 @@ body .background-piece {
   --clr-Theme-bg: hsl(230, 17%, 14%);
   --clr-Theme-top-bg-pattern: hsl(232, 19%, 15%);
   --clr-Theme-card-bg: hsl(228, 28%, 20%);
+  --clr-Theme-card-bg-hover: hsl(230, 25%, 30%);
   --clr-Theme-text: hsl(228, 34%, 66%);
   --clr-Theme-hightlight: hsl(0, 0%, 100%);
 }
@@ -59,6 +60,7 @@ body .background-piece {
   --clr-Theme-bg: hsl(0, 0%, 100%);
   --clr-Theme-top-bg-pattern: hsl(225, 100%, 98%);
   --clr-Theme-card-bg: hsl(227, 47%, 96%);
+  --clr-Theme-card-bg-hover: hsl(226, 44%, 90%);
   --clr-Theme-text: hsl(228, 12%, 44%);
   --clr-Theme-hightlight: hsl(230, 17%, 14%);
 }
@@ -207,6 +209,13 @@ body .background-piece {
   padding: 1.5em;
   text-align: center;
   background: var(--clr-Theme-card-bg);
+  cursor: pointer;
+  -webkit-transition: background 0.25s;
+  transition: background 0.25s;
+}
+
+.accounts .account-card:hover {
+  background: var(--clr-Theme-card-bg-hover);
 }
 
 .accounts .account-card + .account-card {
@@ -334,6 +343,13 @@ body .background-piece {
   background: var(--clr-Theme-card-bg);
   padding: 1.5em;
   border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: background 0.25s;
+  transition: background 0.25s;
+}
+
+.grid-item:hover {
+  background: var(--clr-Theme-card-bg-hover);
 }
 
 .grid-item .top {

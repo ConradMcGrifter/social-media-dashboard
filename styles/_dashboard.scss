@@ -16,7 +16,15 @@
         padding: 1.5em;
         text-align: center;
         background: var(--clr-Theme-card-bg);
+        cursor: pointer;
+        transition: background 0.25s;
+
         // this setts margin for the cards after the first card
+
+        &:hover {
+            background: var(--clr-Theme-card-bg-hover);
+        }
+
         + .account-card {
             margin-left: 2em;
 
